@@ -198,7 +198,7 @@ BUNDLE_DEST=`mktemp -d "$BUILDPACK_DIR/build-XXXX"`
 TOOL_NODE_FLAGS="--max-old-space-size=4096" METEOR build $BUILD_OPTIONS --server $ROOT_URL $SERVER_ONLY_FLAG --directory $BUNDLE_DEST
 
 $METEOR_NPM i -g fix-meteor-local-modules
-fix-meteor-local-modules $BUNDLE_DEST/bundle
+fix-meteor-local-modules $BUNDLE_DEST
 ls -la $BUNDLE_DEST/bundle
 ls -la $BUNDLE_DEST/bundle/programs/server/npm/
 ls -la $BUNDLE_DEST/bundle/programs/server/npm/node_modules
