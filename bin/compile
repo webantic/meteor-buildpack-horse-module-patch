@@ -199,6 +199,10 @@ TOOL_NODE_FLAGS="--max-old-space-size=4096" METEOR build $BUILD_OPTIONS --server
 
 $METEOR_NPM i -g fix-meteor-local-modules
 fix-meteor-local-modules $BUNDLE_DEST
+ls -la $BUNDLE_DEST
+ls -la $BUNDLE_DEST/programs/server/npm/
+ls -la $BUNDLE_DEST/programs/server/npm/node_modules
+ls -la $BUNDLE_DEST/programs/server/npm/node_modules/@webantic/
 
 echo "-----> Moving built slug to $COMPILE_DIR/app"
 mv $BUNDLE_DEST/bundle "$COMPILE_DIR/app"
