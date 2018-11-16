@@ -176,7 +176,7 @@ if [ -e "$APP_SOURCE_DIR"/package.json ]; then
   if [ -n "$USE_YARN" ]; then
     echo "-----> Using Yarn."
     $METEOR_NPM install -g yarn
-    yarn
+    yarn install $YARN_ARGS
   else
     $METEOR_NPM install
   fi
